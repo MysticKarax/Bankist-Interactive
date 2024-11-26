@@ -1,4 +1,6 @@
-const hamburguerMenu = document.querySelector(".label-hamburguer-menu");
+const hamburguerMenu = document.querySelector(
+  ".header__hamburguer-menu-toggle-label"
+);
 
 console.log("object");
 
