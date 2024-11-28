@@ -24,8 +24,15 @@
 }
 
 html {
-  /* background-color: cadetblue; */
+  background-color: #f3f3f3;
+  font-size: 1rem;
 }
+
+/* html,
+body {
+  
+  overflow-y: auto;
+} */
 
 * img {
   height: 50px;
@@ -73,11 +80,10 @@ button {
     "main"
     "divider-hero"
     "features"
-    "hr-close-features"
+    "divider-features"
     "operations"
-    "hr-close-operations"
+    "divider-operations"
     "testimonials"
-    "hr-close-testimonials"
     "footer";
 }
 
@@ -156,10 +162,7 @@ button {
   gap: 3rem;
   transition: all 0.3s;
   backdrop-filter: blur(20px);
-}
-
-.link {
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 .hamburguer-menu-toggle:checked + .header__links {
@@ -170,20 +173,26 @@ button {
   display: none;
 }
 
-/* ----> MAIN SECTION <---- */
+.header__cta-btn {
+  padding: 2rem;
+  font-size: 2rem;
+}
+
+/* ----> HERO SECTION <---- */
 
 .hero {
   grid-area: main;
+  text-align: center;
 }
 
-main > div.hero__text {
+.hero__text {
   margin: 1rem;
   display: grid;
   grid-template-rows: 1fr 3rem 2rem;
   gap: 1rem;
 }
 
-main > div.hero__text > .hero__title {
+.hero__text > .hero__title {
   grid-row: 1 / 2;
 }
 
@@ -191,7 +200,7 @@ main > div.hero__text > .hero__title {
   background-image: var(--gradient-primary);
 }
 
-main > div.hero__text > .hero__subtitle {
+.hero__text > .hero__subtitle {
   grid-row: 2 / 3;
 }
 
@@ -280,8 +289,8 @@ main > div.hero__text > .hero__subtitle {
   display: none;
 }
 
-hr.close-features {
-  grid-area: hr-close-features;
+.divider-features {
+  grid-area: divider-features;
 }
 
 /* ----> OPERATIONS SECTION <---- */
@@ -295,8 +304,10 @@ hr.close-features {
 }
 
 .operations__buttons {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  place-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 22rem));
+  grid-template-rows: repeat(3, 3rem);
   gap: 1rem;
 }
 
@@ -312,6 +323,10 @@ hr.close-features {
   background-color: var(--color-tertiary);
 }
 
+.operations__description {
+  margin-bottom: 3rem;
+}
+
 .operations__button--description {
   font-weight: 600;
 }
@@ -323,6 +338,8 @@ hr.close-features {
 .operations__details {
   background-color: white;
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
   margin: -0.9rem;
   gap: 3rem;
@@ -349,8 +366,8 @@ hr.close-features {
   font-size: 1.5rem;
 }
 
-hr.close-operations {
-  grid-area: hr-close-operations;
+.divider-operations {
+  grid-area: divider-operations;
 }
 
 /* ----> TESTIMONIALS SECTION <---- */
@@ -414,23 +431,6 @@ hr.close-testimonials {
 
 /* ----> FOOTER SECTION <---- */
 
-/* .footer-style,
-.footer-style ul > li {
-  background-color: #37383d;
-  grid-area: footer;
-  color: white;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 3rem;
-  grid-template-areas:
-    "."
-    "info"
-    "hr"
-    "ul"
-    "logo"
-    "copyright";
-} */
-
 .footer {
   background-color: #37383d;
   grid-area: footer;
@@ -440,15 +440,15 @@ hr.close-testimonials {
   gap: 3rem;
   grid-template-areas:
     "."
-    "info"
-    "hr"
-    "ul"
-    "logo"
+    "footer__cta"
+    "footer-divider"
+    "footer__links"
+    "footer__branding"
     "copyright";
 }
 
 .footer__cta {
-  grid-area: info;
+  grid-area: footer__cta;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -466,40 +466,38 @@ hr.close-testimonials {
   font-size: 1.5rem;
 }
 
-.footer__divider {
-  grid-area: hr;
+.footer-divider {
+  grid-area: footer-divider;
   border-color: #6b6b6b;
 }
 
 .footer__links {
-  grid-area: ul;
-}
-
-.footer__links {
+  grid-area: footer__links;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.footer__links > ul > li > a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   text-align: center;
+}
+
+.footer__link {
   padding: 1rem;
   color: white;
 }
 
 .footer__branding {
-  grid-area: logo;
+  grid-area: footer__branding;
   display: flex;
   justify-content: center;
 }
 
 .footer__copyright {
   grid-area: copyright;
-  margin: 1rem 1rem;
+  /* TODO: Arreglar esta mexicanada de que el footer no esta completo */
+  margin: 1rem 1rem 7rem 1rem;
   color: #aaa;
+  text-align: center;
+  /* min-height: 16.66vh; */
 }
 
 .footer__highlight {
@@ -543,17 +541,6 @@ hr.close-testimonials {
     flex-direction: row;
     gap: 1rem;
     overflow: visible;
-  }
-
-  .link {
-    font-size: 0.9rem;
-    color: black;
-    transition: all 0.3s;
-    padding: 0.2rem 0.7rem;
-  }
-
-  .link:hover {
-    background-color: #5f1192;
   }
 
   /* FIN SECCION HAMBURGUESA */
