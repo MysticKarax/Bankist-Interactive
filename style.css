@@ -28,12 +28,6 @@ html {
   font-size: 1rem;
 }
 
-/* html,
-body {
-  
-  overflow-y: auto;
-} */
-
 * img {
   height: 50px;
 }
@@ -161,7 +155,7 @@ button {
   text-align: center;
   gap: 3rem;
   transition: all 0.3s;
-  backdrop-filter: blur(20px);
+  background-color: white;
   font-size: 2rem;
 }
 
@@ -192,17 +186,17 @@ button {
   gap: 1rem;
 }
 
-.hero__text > .hero__title {
+/* .hero__text > .hero__title {
   grid-row: 1 / 2;
-}
+} */
 
 .hero__highlight {
   background-image: var(--gradient-primary);
 }
 
-.hero__text > .hero__subtitle {
+/* .hero__text > .hero__subtitle {
   grid-row: 2 / 3;
-}
+} */
 
 .hero__btn {
   color: var(--color-primary);
@@ -303,6 +297,13 @@ button {
   gap: 3rem;
 }
 
+.operations__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 .operations__buttons {
   display: grid;
   place-content: center;
@@ -341,7 +342,7 @@ button {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin: -0.9rem;
+  width: 100vw;
   gap: 3rem;
   padding: 0 1rem;
 }
@@ -358,6 +359,10 @@ button {
   height: 5rem;
   margin-top: 4.5rem;
   fill: var(--color-secondary-darker);
+}
+
+.operations__description {
+  display: grid;
 }
 
 .operations__description--subtitle {
@@ -497,7 +502,6 @@ hr.close-testimonials {
   margin: 1rem 1rem 7rem 1rem;
   color: #aaa;
   text-align: center;
-  /* min-height: 16.66vh; */
 }
 
 .footer__highlight {
@@ -510,6 +514,7 @@ hr.close-testimonials {
 @media (width >= 640px) {
   html {
     background-color: red;
+    /* font-size: 1.5rem; */
   }
 
   .hero {
@@ -529,21 +534,6 @@ hr.close-testimonials {
   html {
     background-color: darksalmon;
   }
-  /* DESAPARECE AL MENU HAMBURGUESA */
-  .header__hamburguer-menu-toggle-label {
-    display: none;
-  }
-
-  .header__links {
-    position: static;
-    width: auto;
-    height: auto;
-    flex-direction: row;
-    gap: 1rem;
-    overflow: visible;
-  }
-
-  /* FIN SECCION HAMBURGUESA */
 
   /* ----> MAIN SECTION <---- */
 }
@@ -562,7 +552,28 @@ hr.close-testimonials {
   @media screen and (orientation: landscape) {
     html {
       background-color: blueviolet;
+      /* font-size: 20rem; */
     }
+
+    .hero {
+      font-size: 2rem;
+    }
+
+    /* DESAPARECE AL MENU HAMBURGUESA */
+    .header__hamburguer-menu-toggle-label {
+      display: none;
+    }
+
+    .header__links {
+      position: static;
+      width: auto;
+      height: auto;
+      flex-direction: row;
+      gap: 1rem;
+      overflow: visible;
+    }
+
+    /* FIN SECCION HAMBURGUESA */
   }
 }
 /* / xl / */
@@ -573,7 +584,7 @@ hr.close-testimonials {
 }
 
 /* / 2xl / */
-@media (width >= 1400px) {
+/* @media (width >= 1400px) {
   html {
     background-color: cornflowerblue;
   }
@@ -591,4 +602,4 @@ hr.close-testimonials {
       "hr-close-testimonials hr-close-testimonials hr-close-testimonials hr-close-testimonials"
       "footer footer footer footer";
   }
-}
+} */
