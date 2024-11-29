@@ -49,6 +49,7 @@ button {
   border: none;
   border-radius: 3rem;
   padding: 1rem;
+  cursor: pointer;
 }
 
 .section-title {
@@ -182,21 +183,18 @@ button {
 .hero__text {
   margin: 1rem;
   display: grid;
-  grid-template-rows: 1fr 3rem 2rem;
+  grid-template-rows: repeat(auto-fit, minmax(1rem, 1fr));
   gap: 1rem;
+  font-size: 1rem;
 }
 
-/* .hero__text > .hero__title {
-  grid-row: 1 / 2;
-} */
+.hero__subtitle {
+  font-size: 1rem;
+}
 
 .hero__highlight {
   background-image: var(--gradient-primary);
 }
-
-/* .hero__text > .hero__subtitle {
-  grid-row: 2 / 3;
-} */
 
 .hero__btn {
   color: var(--color-primary);
@@ -226,7 +224,7 @@ button {
 }
 
 .hero__image {
-  height: 200px;
+  height: 10rem;
 }
 
 .divider-hero {
@@ -342,7 +340,7 @@ button {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 100vw;
+  width: 100%;
   gap: 3rem;
   padding: 0 1rem;
 }
@@ -469,6 +467,8 @@ hr.close-testimonials {
 
 .footer__signup-btn {
   font-size: 1.5rem;
+  width: auto;
+  margin: auto;
 }
 
 .footer-divider {
@@ -478,10 +478,10 @@ hr.close-testimonials {
 
 .footer__links {
   grid-area: footer__links;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  width: 65vw;
+  margin: 0 auto;
   text-align: center;
 }
 
@@ -498,8 +498,7 @@ hr.close-testimonials {
 
 .footer__copyright {
   grid-area: copyright;
-  /* TODO: Arreglar esta mexicanada de que el footer no esta completo */
-  margin: 1rem 1rem 7rem 1rem;
+  margin: 1rem;
   color: #aaa;
   text-align: center;
 }
@@ -517,8 +516,25 @@ hr.close-testimonials {
     /* font-size: 1.5rem; */
   }
 
+  .footer__signup-btn {
+    width: 50%;
+    margin: 0 auto;
+  }
+
   .hero {
     margin: 0 8rem;
+  }
+
+  .hero__text {
+    font-size: 1.4rem;
+  }
+
+  .hero__subtitle {
+    font-size: 1.4rem;
+  }
+
+  .hero__image {
+    height: 20rem;
   }
 }
 
@@ -535,14 +551,22 @@ hr.close-testimonials {
     background-color: darksalmon;
   }
 
+  .hero__text {
+    font-size: 2rem;
+  }
+
+  .hero__subtitle {
+    font-size: 2rem;
+  }
+
   /* ----> MAIN SECTION <---- */
 }
 
-@media (hover: hover) {
+/* @media (hover: hover) {
   html {
     background-color: aqua;
   }
-}
+} */
 
 /* lg */
 @media (width >= 1024px) {
@@ -553,10 +577,6 @@ hr.close-testimonials {
     html {
       background-color: blueviolet;
       /* font-size: 20rem; */
-    }
-
-    .hero {
-      font-size: 2rem;
     }
 
     /* DESAPARECE AL MENU HAMBURGUESA */
