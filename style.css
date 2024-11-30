@@ -574,14 +574,14 @@ hr.close-testimonials {
     gap: 1rem;
     overflow: visible;
     background-color: transparent;
-    font-size: 1rem;
+    font-size: 1.5rem;
     justify-content: center;
     align-items: center;
   }
 
   .header__cta-btn {
     padding: 1rem;
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
 
   /* FIN SECCION HAMBURGUESA */
@@ -610,6 +610,10 @@ hr.close-testimonials {
     font-size: 3rem;
   }
 
+  .money--img {
+    order: 2;
+  }
+
   /* ----> MAIN SECTION <---- */
   .hero__text {
     font-size: 2rem;
@@ -636,6 +640,8 @@ hr.close-testimonials {
     justify-content: center;
     align-items: center;
   }
+
+  /* OPERATIONS SECTION */
 
   .operations__buttons {
     grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
