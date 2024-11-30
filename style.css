@@ -32,6 +32,12 @@ html {
   height: 50px;
 }
 
+* svg {
+  height: auto;
+  width: auto;
+  fill: none;
+}
+
 * li,
 a {
   text-decoration: none;
@@ -240,7 +246,7 @@ button {
   display: flex;
   flex-direction: column;
   gap: 3rem;
-  /* align-items: center; */
+  align-items: center;
 }
 
 .feature__title {
@@ -254,6 +260,8 @@ button {
   flex-direction: column;
   gap: 3rem;
   align-items: center;
+  margin: 0;
+  justify-content: center;
 }
 
 .feature {
@@ -277,10 +285,6 @@ button {
   display: none;
 }
 
-.feature__icon {
-  display: none;
-}
-
 .divider-features {
   grid-area: divider-features;
 }
@@ -295,6 +299,10 @@ button {
   gap: 3rem;
 }
 
+.operations__intro {
+  margin: 0 auto;
+}
+
 .operations__content {
   display: flex;
   justify-content: center;
@@ -304,10 +312,9 @@ button {
 
 .operations__buttons {
   display: grid;
-  place-content: center;
-  grid-template-columns: repeat(auto-fit, minmax(14rem, 22rem));
-  grid-template-rows: repeat(3, 3rem);
+  grid-template-columns: repeat(auto-fit, minmax(18.5rem, 1fr));
   gap: 1rem;
+  width: 100%;
 }
 
 .operations__button--beige {
@@ -322,16 +329,12 @@ button {
   background-color: var(--color-tertiary);
 }
 
-.operations__description {
-  margin-bottom: 3rem;
+.operations__step {
+  font-weight: bold;
 }
 
 .operations__button--description {
   font-weight: 600;
-}
-
-.operations__step {
-  font-weight: bold;
 }
 
 .operations__details {
@@ -343,6 +346,10 @@ button {
   width: 100%;
   gap: 3rem;
   padding: 0 1rem;
+}
+
+.operations__icon--container {
+  display: inline;
 }
 
 .operations__icon--background {
@@ -361,6 +368,7 @@ button {
 
 .operations__description {
   display: grid;
+  margin: 3rem 0rem;
 }
 
 .operations__description--subtitle {
@@ -381,6 +389,10 @@ button {
   display: grid;
   gap: 3rem;
   margin: 0 1rem;
+}
+
+.testimonials__intro {
+  margin: 0 auto;
 }
 
 .testimonial__quote {
@@ -516,11 +528,6 @@ hr.close-testimonials {
     /* font-size: 1.5rem; */
   }
 
-  .footer__signup-btn {
-    width: 50%;
-    margin: 0 auto;
-  }
-
   .hero {
     margin: 0 8rem;
   }
@@ -536,6 +543,17 @@ hr.close-testimonials {
   .hero__image {
     height: 20rem;
   }
+
+  .operations__button--red {
+    grid-column: 1 / -1;
+    margin: 0 auto;
+    width: 50%;
+  }
+
+  .footer__signup-btn {
+    width: 50%;
+    margin: 0 auto;
+  }
 }
 
 @media screen and (orientation: landscape) {
@@ -547,10 +565,27 @@ hr.close-testimonials {
 /* MD */
 
 @media (width >= 768px) {
+  /* ----> GENERAL STYLING <---- */
+
   html {
     background-color: darksalmon;
   }
 
+  * svg {
+    height: 2rem;
+    width: 2rem;
+    fill: var(--color-primary-darker);
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .section-subtitle {
+    font-size: 3rem;
+  }
+
+  /* ----> MAIN SECTION <---- */
   .hero__text {
     font-size: 2rem;
   }
@@ -559,7 +594,68 @@ hr.close-testimonials {
     font-size: 2rem;
   }
 
-  /* ----> MAIN SECTION <---- */
+  /* ----> FEATURES SECTION <---- */
+  .feature {
+    gap: 6rem;
+  }
+
+  .features__list {
+    margin: 0 3rem;
+  }
+
+  .feature--digital,
+  .feature--money,
+  .feature--debit {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .operations__buttons {
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  }
+
+  .operations__button--red {
+    grid-column: auto;
+    margin: 0;
+    width: auto;
+  }
+
+  .feature__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+    width: 3rem;
+    background-color: var(--color-primary-opacity);
+    border-radius: 50%;
+  }
+
+  /* ----> OPERATIONS SECTION <---- */
+
+  .operations__details {
+    display: grid;
+    padding: 0 3rem;
+    grid-template-columns: 0.1fr 2fr;
+  }
+
+  .operations__icon--container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .operations__icon--background {
+    padding: 2rem;
+    margin: 2rem 2rem 6rem 2rem;
+  }
+
+  .operations__icon {
+    height: 2.5rem;
+    width: 2rem;
+    margin-bottom: 8.8rem;
+  }
 }
 
 /* @media (hover: hover) {
