@@ -58,6 +58,12 @@ button {
   cursor: pointer;
 }
 
+.features,
+.operations,
+.testimonials {
+  margin: 0 1rem;
+}
+
 .section-title {
   font-weight: 600;
   margin-bottom: 1rem;
@@ -242,7 +248,6 @@ button {
 .features {
   /* background-color: aqua; */
   grid-area: features;
-  margin: 0 1rem;
   display: flex;
   flex-direction: column;
   gap: 3rem;
@@ -253,6 +258,7 @@ button {
   font-weight: 600;
   margin-bottom: 1rem;
   color: var(--color-primary);
+  font-size: 1rem;
 }
 
 .features__list {
@@ -293,7 +299,6 @@ button {
 
 .operations {
   grid-area: operations;
-  margin: 0 1rem;
   display: flex;
   flex-direction: column;
   gap: 3rem;
@@ -387,12 +392,17 @@ button {
   /* background-color: rgb(195, 240, 195); */
   grid-area: testimonials;
   display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
   gap: 3rem;
-  margin: 0 1rem;
 }
 
 .testimonials__intro {
   margin: 0 auto;
+}
+
+.testimonials__carousel {
+  width: 100%;
 }
 
 .testimonial__quote {
@@ -430,6 +440,7 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
 }
 
 .testimonials__previous-slide,
@@ -574,7 +585,7 @@ hr.close-testimonials {
     gap: 1rem;
     overflow: visible;
     background-color: transparent;
-    font-size: 1.5rem;
+    font-size: 1rem;
     justify-content: center;
     align-items: center;
   }
@@ -602,6 +613,12 @@ hr.close-testimonials {
     fill: var(--color-primary-darker);
   }
 
+  .features,
+  .operations,
+  .testimonials {
+    margin: 0 3rem;
+  }
+
   .section-title {
     font-size: 2rem;
   }
@@ -624,12 +641,13 @@ hr.close-testimonials {
   }
 
   /* ----> FEATURES SECTION <---- */
+
   .feature {
     gap: 6rem;
   }
 
   .features__list {
-    margin: 0 3rem;
+    margin: 0;
   }
 
   .feature--digital,
@@ -641,29 +659,11 @@ hr.close-testimonials {
     align-items: center;
   }
 
+  .feature__title {
+    font-size: 1.5rem;
+  }
+
   /* OPERATIONS SECTION */
-
-  .operations__buttons {
-    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
-  }
-
-  .operations__button--red {
-    grid-column: auto;
-    margin: 0;
-    width: auto;
-  }
-
-  .feature__icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 3rem;
-    width: 3rem;
-    background-color: var(--color-primary-opacity);
-    border-radius: 50%;
-  }
-
-  /* ----> OPERATIONS SECTION <---- */
 
   .operations__details {
     display: grid;
@@ -687,6 +687,18 @@ hr.close-testimonials {
     width: 2rem;
     margin-bottom: 8.8rem;
   }
+
+  .operations__buttons {
+    grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  }
+
+  .operations__button--red {
+    grid-column: auto;
+    margin: 0;
+    width: auto;
+  }
+
+  /* TESTIMONIALS SECTION */
 }
 
 /* @media (hover: hover) {
@@ -698,13 +710,75 @@ hr.close-testimonials {
 /* lg */
 @media (width >= 1024px) {
   html {
-    background-color: #ffcb03;
+    background-color: pink;
+  }
+
+  .header__links {
+    gap: 3rem;
+    font-size: 1.5rem;
   }
   @media screen and (orientation: landscape) {
+    /* ESTILADO GENERAL */
+
     html {
       background-color: blueviolet;
       /* font-size: 20rem; */
     }
+
+    /* FEATURE SECTION */
+
+    .feature__title {
+      font-size: 2rem;
+      color: black;
+    }
+
+    .feature__icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 3rem;
+      width: 3rem;
+      background-color: var(--color-primary-opacity);
+      border-radius: 50%;
+    }
+
+    .feature__image {
+      height: 17rem;
+    }
+
+    /* TESTIMONIALS SECTION */
+
+    .testimonials__carousel {
+      margin: 0 auto;
+      width: 50%;
+    }
+
+    .testimonial__quote {
+      font-size: 2.5rem;
+    }
+
+    .testimonial__quote-mark {
+      font-size: 3.5rem;
+    }
+
+    .testimonials__change--slide {
+      position: absolute;
+      left: 0;
+    }
+
+    .testimonials__previous-slide {
+      margin-left: 5rem;
+      margin-top: 30rem;
+    }
+
+    .testimonials__next-slide {
+      margin-right: 5rem;
+      margin-top: 30rem;
+    }
+  }
+
+  .footer__message {
+    font-size: 2.5rem;
   }
 }
 /* / xl / */
