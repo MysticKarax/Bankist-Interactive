@@ -967,6 +967,43 @@ hr.close-testimonials {
     background-color: cornflowerblue;
   }
 
+  /* ----> HEADER <---- */
+
+  .header__navbar {
+    padding: 0 5rem;
+    font-size: 1rem;
+    width: 100%;
+    margin: 0;
+  }
+
+  .header__links {
+    padding: 0.6rem;
+    font-size: 1rem;
+  }
+
+  .header__cta-btn {
+    padding: 0.6rem;
+    font-size: 1rem;
+  }
+
+  .hero__text {
+    font-weight: 500;
+    gap: 1rem;
+  }
+
+  .hero__subtitle {
+    line-height: 1.35;
+  }
+
+  .hero__title {
+    font-size: 3.4rem;
+  }
+
+  .hero__image {
+    height: 25rem;
+    transform: translateY(-5rem);
+  }
+
   /* .layout {
     grid-template-areas:
       "header header header header"
