@@ -1040,6 +1040,11 @@ hr.close-testimonials {
     margin-top: 29rem;
   }
 
+  .overlay {
+    position: absolute;
+    transform: translateY(-257px);
+  }
+
   /* ----> FOOTER SECTION <---- */
   .footer__cta {
     margin: 0 28rem;
