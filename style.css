@@ -26,6 +26,7 @@
 html {
   background-color: #f3f3f3;
   font-size: 1rem;
+  color: #444;
 }
 
 * img {
@@ -325,6 +326,7 @@ button {
   grid-template-columns: repeat(auto-fit, minmax(18.5rem, 1fr));
   gap: 1rem;
   width: 100%;
+  transform: translateY(10px);
 }
 
 .operations__button--beige {
@@ -732,6 +734,10 @@ hr.close-testimonials {
     grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
   }
 
+  .operations__button--green {
+    transform: translateY(5px);
+  }
+
   .operations__button--red {
     grid-column: auto;
     margin: 0;
@@ -967,6 +973,12 @@ hr.close-testimonials {
     background-color: cornflowerblue;
   }
 
+  .features__intro,
+  .operations__intro,
+  .testimonials__intro {
+    margin: 0 21rem 5rem 21rem;
+  }
+
   /* ----> HEADER <---- */
 
   .header__navbar {
@@ -1004,17 +1016,32 @@ hr.close-testimonials {
     transform: translateY(-5rem);
   }
 
-  /* .layout {
-    grid-template-areas:
-      "header header header header"
-      "main main main main"
-      "hr-close-hero hr-close-hero hr-close-hero hr-close-hero"
-      "features features features features"
-      "hr-close-features hr-close-features hr-close-features hr-close-features"
-      "operations operations operations operations"
-      "hr-close-operations hr-close-operations hr-close-operations hr-close-operations"
-      "testimonials testimonials testimonials testimonials"
-      "hr-close-testimonials hr-close-testimonials hr-close-testimonials hr-close-testimonials"
-      "footer footer footer footer";
-  } */
+  /* ----> FEATURES SECTION <---- */
+
+  .feature__image {
+    height: 30rem;
+    filter: blur(30px);
+  }
+
+  /* ----> OPERATIONS SECTION <---- */
+
+  .operations__content {
+    margin: 0 10rem;
+  }
+
+  .operations__buttons {
+    transform: translateY(10px);
+  }
+
+  /* ----> TESTIMONIALS SECTION <---- */
+
+  .testimonials__previous-slide,
+  .testimonials__next-slide {
+    margin-top: 29rem;
+  }
+
+  /* ----> FOOTER SECTION <---- */
+  .footer__cta {
+    margin: 0 28rem;
+  }
 }
