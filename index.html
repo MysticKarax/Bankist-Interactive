@@ -28,23 +28,27 @@
           />
           <ul class="header__links">
             <li class="header__link-item">
-              <a class="header__link" href="#">Features</a>
+              <a class="header__link" href="#features-section">Features</a>
             </li>
             <li class="header__link-item">
-              <a class="header__link" href="#">Operations</a>
+              <a class="header__link" href="#operations-section">Operations</a>
             </li>
             <li class="header__link-item">
-              <a class="header__link" href="#">Testimonials</a>
+              <a class="header__link" href="#testimonials-section"
+                >Testimonials</a
+              >
             </li>
             <li class="header__link-item">
-              <button class="header__cta-btn">Open account</button>
+              <button class="header__signup-btn signup-btn">
+                Open account
+              </button>
             </li>
           </ul>
         </nav>
       </header>
 
       <!-- HERO -->
-      <main class="hero">
+      <main class="hero" id="hero-section">
         <div class="hero__text">
           <h1 class="hero__title">
             When <span class="hero__highlight">banking</span> meets
@@ -69,7 +73,7 @@
       <hr class="divider-hero" />
 
       <!-- FEATURES SECTION -->
-      <section class="features">
+      <section class="features" id="features-section">
         <div class="features__intro">
           <h3 class="section-title">Features</h3>
           <h5 class="section-subtitle">
@@ -164,7 +168,7 @@
       <hr class="divider-features" />
 
       <!-- OPERATIONS -->
-      <section class="operations">
+      <section class="operations" id="operations-section">
         <div class="operations__intro">
           <h4 class="section-title">Operations</h4>
           <p class="section-subtitle">
@@ -216,7 +220,7 @@
       <hr class="divider-operations" />
 
       <!-- TESTIMONIALS -->
-      <section class="testimonials">
+      <section class="testimonials" id="testimonials-section">
         <div class="testimonials__intro">
           <h4 class="section-title">Not Sure Yet?</h4>
           <p class="section-subtitle">
@@ -324,13 +328,13 @@
       </section>
 
       <!-- FOOTER -->
-      <footer class="footer">
+      <footer class="footer" id="footer-section">
         <div class="footer__cta">
           <p class="footer__message">
             The best day to join Bankist was one year ago. The second best is
             today!
           </p>
-          <button class="footer__signup-btn">
+          <button class="footer__signup-btn signup-btn">
             Open your free account today!
           </button>
         </div>
@@ -370,6 +374,33 @@
         </p>
       </footer>
     </div>
+    <dialog class="modal">
+      <div class="modal-content">
+        <button class="btn-dialog__close">&times;</button>
+        <div class="container__modal-window--title">
+          <h2 class="title-modal-window">Create Your Account</h2>
+        </div>
+        <form class="form__dialog" id="form__dialog" method="dialog">
+          <label for="email">Email</label>
+          <input
+            type="text"
+            id="email"
+            name="email"
+            autocomplete="email"
+            required
+          />
+          <label for="password">Password</label>
+          <input
+            type="text"
+            id="password"
+            name="password"
+            autocomplete="new-password"
+            required
+          />
+          <button type="button" class="btn-modal-register">Register</button>
+        </form>
+      </div>
+    </dialog>
     <script src="script.js"></script>
   </body>
 </html>
