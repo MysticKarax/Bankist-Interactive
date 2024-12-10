@@ -292,6 +292,7 @@ button {
 
 .feature__image {
   height: 11rem;
+  content-visibility: auto;
 }
 
 .feature__icon {
@@ -377,6 +378,7 @@ button {
   height: 5rem;
   margin-top: 4.5rem;
   fill: var(--color-secondary-darker);
+  content-visibility: auto;
 }
 
 .operations__description {
@@ -432,6 +434,7 @@ button {
 .testimonial__photo {
   border-radius: 50%;
   height: 5rem;
+  content-visibility: auto;
 }
 
 .testimonial__info {
@@ -459,7 +462,7 @@ button {
   background-color: white;
 }
 
-hr.close-testimonials {
+.close-testimonials {
   grid-area: hr-close-testimonials;
 }
 
@@ -525,6 +528,10 @@ hr.close-testimonials {
   grid-area: footer__branding;
   display: flex;
   justify-content: center;
+}
+
+.footer__logo {
+  content-visibility: auto;
 }
 
 .footer__copyright {

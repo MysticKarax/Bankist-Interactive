@@ -1,4 +1,4 @@
-// HAMBURGUER MENU
+// ----> HAMBURGUER MENU <----
 
 const H_HAMBURGUER_MENU = document.querySelector(
   ".header__hamburguer-menu-toggle-label"
@@ -17,7 +17,7 @@ formElement.addEventListener("submit", (event) => {
   console.log("Formulario no enviado, acción personalizada aquí.");
 });
 
-// MODAL WINDOW
+// ----> MODAL WINDOW <----
 
 const H_DIALOG = document.querySelector("dialog");
 console.log(H_DIALOG);
@@ -57,7 +57,7 @@ H_DIALOG.addEventListener("click", (e) => {
   }
 });
 
-// ACTIVANDO STICKY HEADER
+// ----> ACTIVANDO STICKY HEADER <----
 
 window.onscroll = function () {
   const H_HEADER = document.querySelector("header");
@@ -70,3 +70,13 @@ window.onscroll = function () {
     H_HEADER.classList.remove("sticky");
   }
 };
+
+// ----> LAZY LOADING CHECK <----
+
+const hasNativeLazyLoadSupport = "loading" in HTMLImageElement.prototype;
+if (!hasNativeLazyLoadSupport) {
+  // aplicar otra estrategia para la carga diferida
+  console.log("No soporta la etiqueta load");
+} else {
+  console.log("Si soporta la etiqueta load");
+}
