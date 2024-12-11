@@ -3,9 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bankist | When Bakinging meets minimalism</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Bankist | When Banking meets minimalism</title>
     <link rel="icon" type="image/x-icon" href="img/icon.png" />
+
+    <!-- SWIPER CSS -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+
+    <!-- MY CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- BOX ICONS CSS -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="layout">
@@ -57,8 +68,11 @@
           <p class="hero__subtitle">
             A simpler banking experience for a simpler life.
           </p>
-          <button class="hero__btn">Learn More &downarrow;</button>
+          <a class="hero__btn" href="#features-section">
+            Learn More &downarrow;
+          </a>
           <div class="hero__divider">
+            <a class="hero__anchor" href="#features-section"></a>
             <hr class="hero__line" />
           </div>
         </div>
@@ -231,105 +245,115 @@
           </p>
         </div>
         <div class="testimonials__carousel">
-          <div class="testimonial overlay">
-            <h4 class="testimonial__quote">
-              <span class="testimonial__quote-mark">“</span>Best financial
-              decision ever!
-              <span class="testimonial__quote-mark">”</span>
-            </h4>
-            <blockquote class="testimonial__experience">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut
-              veniam dignissimos commodi, necessitatibus qui iusto modi
-              accusamus esse. Cupiditate est neque excepturi molestiae non! Ab
-              voluptatibus natus iusto voluptatum magnam. Lorem ipsum dolor sit
-              amet consectetur adipisicing elit. Quod laborum iure nihil
-              provident. Non, est deleniti blanditiis minus, libero omnis
-              praesentium quia architecto sapiente repellat perspiciatis neque.
-              Quis, fugit molestias!
-            </blockquote>
-            <address class="testimonial__author">
-              <div class="testimonial-img-container">
-                <img
-                  src="img/user-1.jpg"
-                  loading="lazy"
-                  alt="Testimonial Photo"
-                  class="testimonial__photo"
-                />
+          <!-- CAROUSEL STARTS HERE -->
+          <div class="testimonial mySwiper active">
+            <div class="swiper-wrapper">
+              <div class="slide swiper-slide">
+                <div class="testimonial__quote--container">
+                  <i class="bx bxs-quote-alt-left quote-icon"></i>
+                  <h4 class="testimonial__quote">
+                    Best financial decision ever!
+                  </h4>
+                  <!-- <i class="bx bxs-quote-alt-right quote-icon"></i> -->
+                </div>
+                <blockquote class="testimonial__experience">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Dolorem, nostrum blanditiis distinctio provident aliquid
+                  natus. Minus hic eos saepe. Ullam aperiam vel, quos esse
+                  consequatur assumenda ex. Debitis, expedita voluptatum! Lorem
+                  ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+                  nesciunt distinctio obcaecati similique eos reiciendis et illo
+                  in deserunt quam, exercitationem doloribus accusamus impedit
+                  possimus quidem alias minima debitis delectus.
+                </blockquote>
+                <address class="testimonial__author">
+                  <div class="testimonial-img-container">
+                    <img
+                      src="img/user-1.jpg"
+                      alt="testimonial image"
+                      class="testimonial__photo"
+                    />
+                  </div>
+                  <div class="testimonial__info">
+                    <h4 class="testimonial__name">Arav Lynn</h4>
+                    <p class="testimonial__location">San Fransisco, USA</p>
+                  </div>
+                </address>
               </div>
-              <div class="testimonial__info">
-                <h4 class="testimonial__name">Aarav Lynn</h4>
-                <p class="testimonial__location">San Francisco, USA</p>
+              <!--  -->
+              <div class="slide swiper-slide">
+                <div class="testimonial__quote--container">
+                  <h4 class="testimonial__quote">
+                    <i class="bx bxs-quote-alt-left quote-icon"></i>
+                    The last step to become a complete minimalist
+                    <i class="bx bxs-quote-alt-right quote-icon"></i>
+                  </h4>
+                </div>
+
+                <blockquote class="testimonial__experience">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Praesentium rerum enim possimus, repellat labore quaerat
+                  repudiandae ea eveniet cumque quisquam quasi commodi iure
+                  assumenda reiciendis illo eum, architecto dignissimos
+                  distinctio. Lorem ipsum dolor sit amet consectetur adipisicing
+                  elit. Enim omnis aut dolor quos incidunt, architecto
+                  recusandae ipsum libero natus quisquam aliquam eum possimus,
+                  dolorum exercitationem excepturi. Similique ut dolores nemo.
+                </blockquote>
+                <address class="testimonial__author">
+                  <div class="testimonial-img-container">
+                    <img
+                      src="img/user-2.jpg"
+                      alt="testimonial image"
+                      class="testimonial__photo"
+                    />
+                  </div>
+                  <div class="testimonial__info">
+                    <h4 class="testimonial__name">Miyah Miles</h4>
+                    <p class="testimonial__location">London, UK</p>
+                  </div>
+                </address>
               </div>
-            </address>
+              <!--  -->
+              <div class="slide swiper-slide">
+                <div class="testimonial__quote--container">
+                  <h4 class="testimonial__quote">
+                    <i class="bx bxs-quote-alt-left quote-icon"></i>
+                    Finally free from old-school banks
+                    <i class="bx bxs-quote-alt-right quote-icon"></i>
+                  </h4>
+                </div>
+                <blockquote class="testimonial__experience">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Praesentium rerum enim possimus, repellat labore quaerat
+                  repudiandae ea eveniet cumque quisquam quasi commodi iure
+                  assumenda reiciendis illo eum, architecto dignissimos
+                  distinctio. Lorem ipsum dolor sit amet consectetur adipisicing
+                  elit. Enim omnis aut dolor quos incidunt, architecto
+                  recusandae ipsum libero natus quisquam aliquam eum possimus,
+                  dolorum exercitationem excepturi. Similique ut dolores nemo.
+                </blockquote>
+                <address class="testimonial__author">
+                  <div class="testimonial-img-container">
+                    <img
+                      src="img/user-3.jpg"
+                      alt="testimonial image"
+                      class="testimonial__photo"
+                    />
+                  </div>
+                  <div class="testimonial__info">
+                    <h4 class="testimonial__name">Francisco Gomez</h4>
+                    <p class="testimonial__location">Lisbon, Portugal</p>
+                  </div>
+                </address>
+              </div>
+              <!--  -->
+            </div>
+            <!-- TESTIMONIAL PAGINATION -->
+            <div class="swiper-button-next swiper-nav-btn"></div>
+            <div class="swiper-button-prev swiper-nav-btn"></div>
+            <div class="swiper-pagination swiper-nav-btn"></div>
           </div>
-          <!--  -->
-          <div class="testimonial overlay">
-            <h4 class="testimonial__quote">
-              <span class="testimonial__quote-mark">“</span>The last step to
-              become a complete minimalist
-              <span class="testimonial__quote-mark">”</span>
-            </h4>
-            <blockquote class="testimonial__experience">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut
-              veniam dignissimos commodi, necessitatibus qui iusto modi
-              accusamus esse. Cupiditate est neque excepturi molestiae non! Ab
-              voluptatibus natus iusto voluptatum magnam. Lorem ipsum dolor sit
-              amet consectetur, adipisicing elit. Sapiente corporis molestias
-              assumenda deleniti at aliquid! Nisi laborum natus eveniet
-              perspiciatis illo nesciunt modi aliquam quaerat mollitia. Error
-              delectus praesentium laudantium.
-            </blockquote>
-            <address class="testimonial__author">
-              <div class="testimonial-img-container">
-                <img
-                  src="img/user-2.jpg"
-                  loading="lazy"
-                  alt="Testimonial Photo"
-                  class="testimonial__photo"
-                />
-              </div>
-              <div class="testimonial__info">
-                <h4 class="testimonial__name">Miyah Miles</h4>
-                <p class="testimonial__location">London, UK</p>
-              </div>
-            </address>
-          </div>
-          <!--  -->
-          <div class="testimonial overlay">
-            <h4 class="testimonial__quote">
-              <span class="testimonial__quote-mark">“</span>Finally free from
-              old-school banks<span class="testimonial__quote-mark">”</span>
-            </h4>
-            <blockquote class="testimonial__experience">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut
-              veniam dignissimos commodi, necessitatibus qui iusto modi
-              accusamus esse. Cupiditate est neque excepturi molestiae non! Ab
-              voluptatibus natus iusto voluptatum magnam. Lorem ipsum dolor, sit
-              amet consectetur adipisicing elit. Nobis vitae ut eaque enim nisi
-              quidem. Molestias sequi velit eum ipsum deserunt aliquid
-              recusandae adipisci possimus, quaerat voluptas ducimus vitae
-              pariatur?
-            </blockquote>
-            <address class="testimonial__author">
-              <div class="testimonial-img-container">
-                <img
-                  src="img/user-3.jpg"
-                  loading="lazy"
-                  alt="Testimonial Photo"
-                  class="testimonial__photo"
-                />
-              </div>
-              <div class="testimonial__info">
-                <h4 class="testimonial__name">Francisco Gomez</h4>
-                <p class="testimonial__location">Lisbon, Portugal</p>
-              </div>
-            </address>
-          </div>
-        </div>
-        <!-- Controles -->
-        <div class="testimonials__change--slide">
-          <button class="testimonials__previous-slide">&leftarrow; Back</button>
-          <button class="testimonials__next-slide">Next &rightarrow;</button>
         </div>
       </section>
 
@@ -412,6 +436,8 @@
         </form>
       </div>
     </dialog>
-    <script src="script.js"></script>
+    <!-- Swiper JS -->
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
