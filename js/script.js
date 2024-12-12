@@ -4,8 +4,6 @@ const H_HAMBURGUER_MENU = document.querySelector(
   ".header__hamburguer-menu-toggle-label"
 );
 
-console.log("object");
-
 H_HAMBURGUER_MENU.addEventListener("click", () => {
   H_HAMBURGUER_MENU.classList.toggle("active");
 });
@@ -13,51 +11,44 @@ H_HAMBURGUER_MENU.addEventListener("click", () => {
 const formElement = document.getElementById("form__dialog");
 
 formElement.addEventListener("submit", (event) => {
-  event.preventDefault(); // Previene el comportamiento por defecto del formulario
-  console.log("Formulario no enviado, acción personalizada aquí.");
+  event.preventDefault(); // PREVENTS FORM BTN DEFAULT BEHAVIOR
 });
 
 // ----> MODAL WINDOW <----
 
 const H_DIALOG = document.querySelector("dialog");
-console.log(H_DIALOG);
 const H_BTN_CLOSE_MODAL = document.querySelector(".btn-dialog__close");
-console.log(H_BTN_CLOSE_MODAL);
 const H_BTN_SIGNUP = document.querySelectorAll(".signup-btn");
-console.log(H_BTN_SIGNUP);
 
-// SI DEJA DE SER UN DIALOGO, ENTONCES AVISARLO
+// IF DIALOG IS NOT AN HTML ELEMENT, DISPLAY AN ADVICE ABOUT IT
 if (!(H_DIALOG instanceof HTMLDialogElement)) {
   console.error("Modal Window Not Found");
   throw new Error();
 }
 
-// POR CADA BOTON CON LA CLASE "SIGNUP" QUE HAYA, AGREGAR UN EVENT
-// LISTENER Y ABRIR LA MODAL CUANDO SE HAGA CLICK EN CUALQUIERA
-// DE ELLOS
+// FOR EACH BTN OF THE PARENT ELEMENT "SIGNUP", ADD AN EVENTLISTENER
+// AND OPEN THE MODAL WINDOW WHEN USER CLICKS ON ANY OF THEM
 H_BTN_SIGNUP.forEach((btn) =>
   btn.addEventListener("click", (e) => {
     e.preventDefault();
     H_DIALOG.showModal();
-    console.log("Abriendo Modal");
   })
 );
 
-// AL DAR CLICK EN LA X, CERRAR EL MODAL
+// WHEN CLICKING ON X BTN, CLOSE MODAL
 H_BTN_CLOSE_MODAL.addEventListener("click", () => {
   H_DIALOG.close();
-  console.log("Boton Cerrar Modal");
 });
 
-// AL DAR CLICK FUERA DEL MODAL, CERRAR EL MODAL
+// WHEN CLICKING OUT OF THE MODAL, CLOSE IT
 H_DIALOG.addEventListener("click", (e) => {
   if (e.target === H_DIALOG) {
     H_DIALOG.close();
-    console.log("Click en Overlay");
+    console.log("Clicked on Overlay");
   }
 });
 
-// ----> ACTIVANDO STICKY HEADER <----
+// ----> ACTIVATING STICKY HEADER <----
 
 window.onscroll = function () {
   const H_HEADER = document.querySelector("header");
@@ -71,14 +62,13 @@ window.onscroll = function () {
   }
 };
 
-// ----> LAZY LOADING CHECK <----
+// ----> CHECKING LAZY LOADING COMPATIBILITY <----
 
 const hasNativeLazyLoadSupport = "loading" in HTMLImageElement.prototype;
 if (!hasNativeLazyLoadSupport) {
-  // aplicar otra estrategia para la carga diferida
-  console.log("No soporta la etiqueta load");
+  console.log("Your Browser Doesn't Support Lazy Load");
 } else {
-  console.log("Si soporta la etiqueta load");
+  console.log("Your Browser Supports Lazy Load");
 }
 
 // ----> TESTIMONIAL CAROUSEL <----
