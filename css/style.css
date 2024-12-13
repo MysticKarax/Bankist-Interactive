@@ -673,6 +673,10 @@ button {
     width: 50%;
   }
 
+  .testimonial__quote {
+    padding: 0;
+  }
+
   .footer__signup-btn {
     width: 50%;
     margin: 0 auto;
@@ -853,6 +857,12 @@ button {
     grid-column: auto;
     margin: 0;
     width: auto;
+  }
+
+  .testimonial__quote--container {
+    display: flex;
+    width: 100%;
+    padding: 0 6rem;
   }
 }
 
@@ -1140,8 +1150,6 @@ button {
   }
 
   .testimonial__quote--container {
-    display: flex;
-    width: 100%;
     padding: 0 3rem;
   }
 
