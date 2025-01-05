@@ -27,7 +27,7 @@ html {
   background-color: #f3f3f3;
   font-size: 1rem;
   color: #444;
-  scroll-behavior: smooth;
+  /* scroll-behavior: smooth; */
 }
 
 * img {
@@ -172,6 +172,7 @@ button {
   transition: all 0.3s;
   background-color: white;
   font-size: 2rem;
+  z-index: 9999;
 }
 
 .hamburguer-menu-toggle:checked + .header__links {
@@ -186,6 +187,29 @@ button {
   padding: 2rem;
   font-size: 2rem;
 }
+
+/* STICKY HEADER SECTION */
+.sticky {
+  /* STATIC HEADER ANIMATION */
+  backdrop-filter: blur(5px);
+  position: sticky;
+  top: 0px;
+  animation: adjust-header linear both;
+  animation-timeline: scroll();
+  animation-range: 0 400px;
+  /* THIS MAKES SURE HEADER WILL ALWAYS OVERLAY */
+  z-index: 1000;
+}
+
+@keyframes adjust-header {
+  to {
+    /* HEADER CHANGES ITS HEIGHT & COLOR: ANIMATION */
+    background: rgba(0, 0, 0, 0.2);
+    height: 80px;
+  }
+}
+
+/* END OF STICKY HEADER SECTION */
 
 /* ----> HERO SECTION <---- */
 
@@ -884,6 +908,29 @@ button {
       font-size: 1.5rem;
     }
 
+    /* STICKY HEADER SECTION */
+    .sticky {
+      /* STATIC HEADER ANIMATION */
+      backdrop-filter: blur(5px);
+      position: sticky;
+      top: 0px;
+      animation: adjust-header linear both;
+      animation-timeline: scroll();
+      animation-range: 0 400px;
+      /* THIS MAKES SURE HEADER WILL ALWAYS OVERLAY */
+      z-index: 1000;
+    }
+
+    @keyframes adjust-header {
+      to {
+        /* HEADER CHANGES ITS HEIGHT & COLOR: ANIMATION */
+        background: rgba(0, 0, 0, 0.2);
+        height: 150px;
+      }
+    }
+
+    /* END OF STICKY HEADER SECTION */
+
     .hero {
       margin-top: 10rem;
       margin-top: 0;
@@ -1046,6 +1093,7 @@ button {
 
   /* ----> HEADER <---- */
 
+  /* STICKY HEADER SECTION */
   .sticky {
     /* STATIC HEADER ANIMATION */
     backdrop-filter: blur(5px);
@@ -1066,6 +1114,8 @@ button {
     }
   }
 
+  /* END OF STICKY HEADER SECTION */
+
   .header__navbar {
     padding: 0 5rem;
     font-size: 1rem;
@@ -1084,6 +1134,12 @@ button {
   }
 
   /* ----> HERO SECTION <---- */
+
+  .hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
   .hero__text {
     font-weight: 500;

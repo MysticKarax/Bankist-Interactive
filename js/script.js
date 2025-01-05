@@ -8,11 +8,11 @@ H_HAMBURGUER_MENU.addEventListener("click", () => {
   H_HAMBURGUER_MENU.classList.toggle("active");
 });
 
-const formElement = document.getElementById("form__dialog");
+const H_FORM_ELEMENT = document.getElementById("form__dialog");
 
-formElement.addEventListener("submit", (event) => {
-  event.preventDefault(); // PREVENTS FORM BTN DEFAULT BEHAVIOR
-});
+// H_FORM_ELEMENT.addEventListener("submit", (event) => {
+//   event.preventDefault(); // PREVENTS FORM BTN DEFAULT BEHAVIOR
+// });
 
 // ----> MODAL WINDOW <----
 
@@ -87,3 +87,63 @@ var swiper = new Swiper(".mySwiper", {
     prevEl: ".swiper-button-prev",
   },
 });
+
+// Modificando scroll web
+
+const H_HEADER_LINKS = document.querySelectorAll(".header__link");
+console.log(H_HEADER_LINKS);
+
+H_HEADER_LINKS.forEach((btn) =>
+  btn.addEventListener("click", (e) => {
+    e.preventDefault();
+    console.log("Click");
+    H_FEATURES_SECTION.scrollIntoView({ behavior: "smooth" });
+  })
+);
+
+const H_LEARN_MORE_BTN = document.querySelector(".hero__anchor");
+
+const H_FEATURES_SECTION = document.querySelector(".features");
+
+H_LEARN_MORE_BTN.addEventListener("click", (e) => {
+  e.preventDefault();
+
+  // Obtiene las coordenadas de la posicion de la seccion features.
+  // const featuresCoords = H_FEATURES_SECTION.getBoundingClientRect();
+  // console.log(featuresCoords);
+
+  // // Obtiene las coordenadas de la posicion actual del usuario en la pagina en X y Y.
+  // console.log("Current Scroll", window.pageXOffset, window.pageYOffset);
+
+  // // Obtiene el alto y ancho del elemento seleccionado
+  // console.log(
+  //   document.documentElement.clientHeight,
+  //   document.documentElement.clientWidth
+  // );
+
+  // //scrolling
+  // window.scrollTo({
+  //   top: featuresCoords.top + window.pageYOffset,
+  //   left: featuresCoords.left + window.pageXOffset,
+  //   behavior: "smooth",
+  // });
+
+  H_FEATURES_SECTION.scrollIntoView({ behavior: "smooth" });
+});
+
+const titulo = document.querySelector("h1");
+let conteo = 0;
+const alertWelcome = function (e) {
+  alert("Bienvenido a el titulo");
+  // titulo.removeEventListener("mouseenter", alertWelcome);
+};
+
+// titulo.addEventListener("mouseenter", alertWelcome);
+
+setTimeout(() => {
+  titulo.removeEventListener("mouseenter", alertWelcome);
+}, 30000);
+
+// titulo.onmouseenter = function (e) {
+//   alert("segundo event listener");
+// };
