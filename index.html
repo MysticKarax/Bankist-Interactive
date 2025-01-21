@@ -39,16 +39,18 @@
           />
           <ul class="header__links">
             <li class="header__link-item">
-              <a class="header__link" href="#">Features</a>
+              <a class="header__link" href="#features-section">Features</a>
             </li>
             <li class="header__link-item">
-              <a class="header__link" href="#">Operations</a>
+              <a class="header__link" href="#operations-section">Operations</a>
             </li>
             <li class="header__link-item">
-              <a class="header__link" href="#">Testimonials</a>
+              <a class="header__link" href="#testimonials-section"
+                >Testimonials</a
+              >
             </li>
             <li class="header__link-item">
-              <button class="header__signup-btn signup-btn">
+              <button class="header__signup-btn signup-btn header__link">
                 Open account
               </button>
             </li>
@@ -57,7 +59,7 @@
       </header>
 
       <!-- HERO -->
-      <main class="hero" id="hero-section">
+      <main class="hero test" id="hero-section">
         <div class="hero__text">
           <h1 class="hero__title">
             When <span class="hero__highlight">banking</span> meets
@@ -85,7 +87,7 @@
       <hr class="divider-hero" />
 
       <!-- FEATURES SECTION -->
-      <section class="features" id="features-section">
+      <section class="features test" id="features-section">
         <div class="features__intro">
           <h3 class="section-title">Features</h3>
           <h5 class="section-subtitle">
@@ -97,8 +99,8 @@
           <div class="feature feature--digital">
             <div class="feature__image-container digital--img">
               <img
-                src="img/digital.jpg"
-                loading="lazy"
+                src="img/digital-lazy.jpg"
+                data-src="img/digital.jpg"
                 alt="computer"
                 class="feature__image"
               />
@@ -126,8 +128,8 @@
           <div class="feature feature--money">
             <div class="feature__image-container money--img">
               <img
-                src="img/grow.jpg"
-                loading="lazy"
+                src="img/grow-lazy.jpg"
+                data-src="img/grow.jpg"
                 alt="Money Growth"
                 class="feature__image"
               />
@@ -155,8 +157,8 @@
           <div class="feature feature--debit">
             <div class="feature__image-container debit--img">
               <img
-                src="img/card.jpg"
-                loading="lazy"
+                src="img/card-lazy.jpg"
+                data-src="img/card.jpg"
                 alt="Debit Card"
                 class="feature__image"
               />
@@ -185,7 +187,7 @@
       <hr class="divider-features" />
 
       <!-- OPERATIONS -->
-      <section class="operations" id="operations-section">
+      <section class="operations test" id="operations-section">
         <div class="operations__intro">
           <h4 class="section-title">Operations</h4>
           <p class="section-subtitle">
@@ -196,17 +198,26 @@
         <div class="operations__content">
           <!-- PERKS -->
           <div class="operations__buttons">
-            <button class="operations__button operations__button--beige">
+            <button
+              class="operations__button operations__button--beige operations__button-active"
+              data-tabs="01"
+            >
               <p class="operations__button--description">
                 <span class="operations__step">01 </span>Instant Transfers
               </p>
             </button>
-            <button class="operations__button operations__button--green">
+            <button
+              class="operations__button operations__button--green"
+              data-tabs="02"
+            >
               <p class="operations__button--description">
                 <span class="operations__step">02 </span>Instant Loans
               </p>
             </button>
-            <button class="operations__button operations__button--red">
+            <button
+              class="operations__button operations__button--red"
+              data-tabs="03"
+            >
               <p class="operations__button--description">
                 <span class="operations__step">03 </span>Instant Closing
               </p>
@@ -214,7 +225,10 @@
             <!-- MORE PERKS CAN BE PLACED HERE -->
           </div>
 
-          <div class="operations__details">
+          <div
+            class="operations__details operations--active"
+            id="operations__details--01"
+          >
             <div class="operations__icon--container">
               <div class="operations__icon--background"></div>
               <svg class="operations__icon">
@@ -236,12 +250,51 @@
               </p>
             </div>
           </div>
+          <div class="operations__details" id="operations__details--02">
+            <div class="operations__icon--container">
+              <div class="operations__icon--background"></div>
+              <svg class="operations__icon">
+                <use xlink:href="img/icons.svg#icon-upload"></use>
+              </svg>
+            </div>
+            <div class="operations__description">
+              <h4 class="operations__description--subtitle">Instant Loans</h4>
+              <p>
+                4,611,962 vistas Se estrenó el 2 mar 2023 #binauralbeats #40Hz
+                #studymusic Improve memory and concentration with these 40Hz
+                binaural beats Gamma waves and ambient study music! Go on
+                journey through the jungle and synchronize your brainwaves to
+                the Gamma brain to help you achieve a state of heightened SUPER
+                focus and attention. These waves may improve cognitive
+              </p>
+            </div>
+          </div>
+          <div class="operations__details" id="operations__details--03">
+            <div class="operations__icon--container">
+              <div class="operations__icon--background"></div>
+              <svg class="operations__icon">
+                <use xlink:href="img/icons.svg#icon-upload"></use>
+              </svg>
+            </div>
+            <div class="operations__description">
+              <h4 class="operations__description--subtitle">Instant Closing</h4>
+              <p>
+                @紙司 hace 14 horas
+                ジェイドに願いを聞かれてナヌークを跪かせたいとか答える主人公とヘルタは単純に気が合う二人なのかもしれない
+                1.6 K Responder @みけも-u6g hace 14 horas
+                「神を困らせたい」ってすごい願いだな 1.2 K Responder 3
+                respuestas @きくらげ-g6k hace 14 horas
+                最後のロゴ破りは第四の壁を超える示唆かと思ったけどその上に更にロゴがでるのはそれすらも星神の掌の上ってことかしら
+                436 Responder @1474号 hace 14 horas
+              </p>
+            </div>
+          </div>
         </div>
       </section>
       <hr class="divider-operations" />
 
       <!-- TESTIMONIALS -->
-      <section class="testimonials" id="testimonials-section">
+      <section class="testimonials test" id="testimonials-section">
         <div class="testimonials__intro">
           <h4 class="section-title">Not Sure Yet?</h4>
           <p class="section-subtitle">
@@ -355,7 +408,7 @@
       </section>
 
       <!-- FOOTER -->
-      <footer class="footer" id="footer-section">
+      <footer class="footer test" id="footer-section">
         <div class="footer__cta">
           <p class="footer__message">
             The best day to join Bankist was one year ago. The second best is
